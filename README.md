@@ -29,7 +29,7 @@ Then, for each file in the archive, there will be the next 8 bytes repeated :
 1. Offset (in sectors) of the file within the archive - 2 Bytes
 2. Offset of the file within the starting sector (in bytes) - 2 Bytes
 3. Size of the file (in sectors) - 2 Bytes
-4. Size of the file withing the last sector (in bytes) - 2 Bytes
+4. Size of the file withing its last sector (in bytes) - 2 Bytes
 ```
 Header of the archive does not count as offset.
 
