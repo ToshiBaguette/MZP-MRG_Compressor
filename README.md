@@ -1,6 +1,6 @@
-#MZP File Format
+# MZP File Format
 
-##Introduction
+## Introduction
 
 MZP files are archives that was mostly used in PlayStation 2 / PSP-era video games a very little subset of titles.
 
@@ -8,13 +8,13 @@ I personally found it used in Tsukihime -A Piece of Blue Glass Moon- to archive 
 
 The file extension of MZP files can be `.mzp`, but it also can be `.mrg`. In this case, the file must not be confused with real MRG Files (those are accompanied by `.hed` and `.nam` files).
 
-##Inner Working
+## Inner Working
 
 A MZP archive consists of a header (representing file signature, and how the archive is partitioned), and the files themselves.
 
 The file do not count size of files in bytes, but in sectors. A sector is a group of 2048 bytes, each sector is 2 KB.
 
-###File Header
+### File Header
 
 Every thing in the header is saved in little-endian, to say, the first 4 bits of a byte are in first position, and then come the 4 last bits.
 Thus `0x6D` is, in little-endian, the equivalent of `0xD6` in big-endian.
@@ -33,14 +33,14 @@ Then, for each file in the archive, there will be the next 8 bytes repeated :
 ```
 Header of the archive does not count as offset.
 
-###File Content
+### File Content
 
 Next, every file is packed one next to another. It is possible to add some offset between files within the archive, as long as this offset taken in account in the header.
 
 The files can be saved in big-endian, it doesn't really matter, you should just make sure of the endianness of the target computer that will read the archive and how it wants to read the bytes.
 
 
-#Tool
+# Tool
 
 In this repo, there is a single Python file named `pack_mrg.py`. This script is made to create a mzp file archive, with every file in a directory.
 
