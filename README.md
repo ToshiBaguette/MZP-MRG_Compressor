@@ -55,4 +55,4 @@ The archive can then be read with a tool like `unpack_allsrc.py` available in th
 
 # Credit
 
-I based my work on the first explaination available from [waku_waku](https://github.com/mchubby/psp-ayakashibito_tools/blob/master/specs/mzp_format.md). Having some trouble really understanding some points, I thought of reverse-engeneering the file format myself, and create an archiving tool to put in practice what I learned. Then, I decided to make a new explanation on the file format myself.
+I based my work on the first explaination available from [Waku_Waku](https://github.com/mchubby/psp-ayakashibito_tools/blob/master/specs/mzp_format.md). Having some trouble really understanding some points, I thought of reverse-engeneering the file format myself, and create an archiving tool to put in practice what I learned. Then, I decided to make a new explanation on the file format myself.
